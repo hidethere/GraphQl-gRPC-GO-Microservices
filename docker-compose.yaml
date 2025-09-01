@@ -7,7 +7,7 @@ services:
     depends_on:
       - account_db
     environment:
-      DATABASE_URL: postgres://hideThere:root123@account_db/hideThere?sslmode=disable
+      DATABASE_URL: 
     restart: on-failure
 
   catalog:
@@ -27,7 +27,7 @@ services:
     depends_on:
       - order_db
     environment:
-      DATABASE_URL: postgres://hideThere:root123@order_db/hideThere?sslmode=disable
+      DATABASE_URL: 
       ACCOUNT_SERVICE_URL: account:8080
       CATALOG_SERVICE_URL: catalog:8080
     restart: on-failure
@@ -53,9 +53,9 @@ services:
       context: ./account
       dockerfile: ./db.dockerfile
     environment:
-      POSTGRES_DB: hideThere
-      POSTGRES_USER: hideThere
-      POSTGRES_PASSWORD: root123
+      POSTGRES_DB: 
+      POSTGRES_USER: 
+      POSTGRES_PASSWORD: 
     ports:
       - 5000:5432
     restart: unless-stopped
@@ -74,9 +74,9 @@ services:
       context: ./order
       dockerfile: ./db.dockerfile
     environment:
-      POSTGRES_DB: hideThere
-      POSTGRES_USER: hideThere
-      POSTGRES_PASSWORD: root123
+      POSTGRES_DB: 
+      POSTGRES_USER: 
+      POSTGRES_PASSWORD: 
     ports:
       - 5001:5432
     restart: unless-stopped
