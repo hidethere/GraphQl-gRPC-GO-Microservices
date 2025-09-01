@@ -1,0 +1,9 @@
+schema: schema.graphql  
+
+models:
+  Account:
+    model: github.com/hidethere/GraphQl-gRPC-GO-Microservices/graphql.Account
+    fields:
+      orders:
+        resolver: true
+

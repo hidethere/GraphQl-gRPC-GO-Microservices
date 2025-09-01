@@ -7,7 +7,7 @@ COPY go.mod go.sum ./
 RUN go mod download
 
 COPY . .
-RUN go build -v -o /usr/local/bin/app ./graphql
+RUN go build -v -o /usr/local/bin/app ./order/cmd/order
 
 EXPOSE 8080
 CMD ["app"]
