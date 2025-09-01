@@ -14,7 +14,12 @@ require (
 	gopkg.in/olivere/elastic.v5 v5.0.86
 )
 
-require github.com/josharian/intern v1.0.0 // indirect
+require (
+	github.com/josharian/intern v1.0.0 // indirect
+	github.com/kr/pretty v0.2.0 // indirect
+	github.com/kr/text v0.1.0 // indirect
+	gopkg.in/check.v1 v1.0.0-20180628173108-788fd7840127 // indirect
+)
 
 require (
 	github.com/agnivade/levenshtein v1.2.1 // indirect
